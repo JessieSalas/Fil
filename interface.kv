@@ -1,0 +1,78 @@
+<Fill>:
+    input: _user_input
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'
+        ScreenManager:
+            id: manager
+            Screen:
+                name: 'landing'
+                FloatLayout:
+                    canvas.before:
+                        Color:
+                            rgb: (0.952941176   ,0.949019608,0.933333333)
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    GridLayout:
+                        size_hint: (0.66,0.3)
+                        pos_hint: {'x': 0.17, 'y': 0.15}
+                        rows:1
+                        TextInput:
+                            id: _user_input
+                            font_name: 'Roboto-Light.ttf'
+                            background_normal: ''
+                            background_active: 'light_blue.png'
+                            on_text: app.update_text(_user_input.text)
+                            hint_text: "Type here."
+					Image:
+					    source: 'fil.png'
+						size_hint: (0.3, 0.3)
+						pos_hint: {'x': 0.34, 'y': 0.65}
+						
+                    Label:
+                        font_name: 'Roboto-Light.ttf'
+                        pos_hint: {'x': 0, 'y': 0.1}
+
+                        font_size: '25dp'
+                        color: (0,0,0,1)
+                        text: app.word0
+
+                    Label:
+                        font_name: 'Roboto-Light.ttf'
+                        pos_hint: {'x': 0.15, 'y': 0.1}
+ 
+                        font_size: '15dp'
+                        color: (0,0,0,1)
+                        text: app.word1
+                    Label:
+                        font_name: 'Roboto-Light.ttf'
+                        pos_hint: {'x': -0.15, 'y': 0.1}
+ 
+                        font_size: '15dp'
+                        color: (0,0,0,1)
+
+                        text: app.word2
+                    Label:
+                        font_name: 'Roboto-Light.ttf'
+                        pos_hint: {'x': 0.30, 'y': 0.1}
+ 
+                        font_size: '15dp'
+                        color: (0,0,0,1)
+
+                        text: app.word3
+                    Label:
+                        font_name: 'Roboto-Light.ttf'
+                        pos_hint: {'x': -0.30, 'y': 0.1}
+ 
+                        font_size: '15dp'
+                        color: (0,0,0,1)
+
+                        text: app.word4
+
+
+
+
+
+
+
